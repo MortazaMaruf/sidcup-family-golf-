@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    padding: 0 ;
+    margin: 0 ;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    color:#fff;
+}
+body{
+    height:100%;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+#cursor{
+    height: 20px;
+    width: 20px;
+    background: #98C223;
+    border-radius: 50%;
+    position:fixed;
+    z-index: 9999; 
+    transition:position ease 1s;
+    pointer-events: none;
+}
+#cursorBlur{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background: #aee02565;
+    position:fixed;
+    filter: blur(30px);
+    z-index: 11; 
+    transition: position ease 5s;
+    pointer-events: none;
+}
+
+nav {
+    height:100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 70px;
+    position: fixed;
+    z-index:  99999;
+}
+nav img {
+    height: 60px;
+    cursor: pointer;
+    padding-right: 4vw;
+    transition: all ease-in-out .2s;
+}
+nav .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4vw;
+}
+nav .menu  li {
+    cursor: pointer;
+    list-style:none;
+    text-transform: uppercase;
+    transition: all ease-in-out .2s;
+}
+nav .menu li:hover{
+    color:#98C223;
+    
+}
+nav img:hover {
+    transform: scale(.9);
+
+
+}
+video{
+    height: fit-content;
+    width: fit-content;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+main{
+    position: relative;
+    
+}
+#page1{
+    height:100vh;
+    width:100%;
+    position:relative;
+    background: rgba(0, 0, 0,.59) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 999;
+}
+#page1 h1{
+    font-size:8.9vw;
+    font-weight:  700;
+    text-transform: uppercase;
+    word-spacing: -5px;
+    letter-spacing: -4px;
+    position: relative;
+    cursor:pointer;
+    
+}
+#page1 h1::before{
+    content:"eat.drink.play.";
+    position: absolute;
+    font-size:8.9vw;
+    font-weight: 700;
+    color: #000;
+    -webkit-text-stroke: 1px #98C223;
+    z-index: -1;
+    top:-5px;
+    left:-5px;
+}
+#page1 h2{
+ 
+    text-transform: uppercase;
+    font-size:3vw;
+    cursor:pointer;
+
+  
+}
+#page1 p{
+    width: 75%;
+    margin-top:20px;
+    text-align: center;
+    cursor:pointer;
+    font-size:20px;
+}
+
+#page2 {
+    width: 100%;
+    min-height: 100vh;
+}
+#scrollers{
+    width:100%;
+    display: inline-block;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y:hidden;
+    /* z-index: 999; */
+    position: relative;
+    z-index: 999;
+
+}
+#scrollers::-webkit-scrollbar{
+    overflow-x: hidden;
+}
+#scroller {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scrollerani;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  
+}
+#scroller h4 {
+    display: inline-block;
+    color:black ;
+    font-size:10vw;
+    margin-right:40px; 
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px #98C223;
+    transition:  all ease .1s;
+}
+#scroller h4:hover{
+    color:#98C223;
+}
+
+
+@keyframes scrollerani {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform : translateX(-100%);
+    }
+}
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 50px;
+    position: relative;
+    z-index: 999;
+    cursor:pointer;
+}
+.about-img img{
+    width:120px;
+    height:120px;
+    border-radius:20px;
+    object-fit: cover;
+    opacity: .5;
+    pointer-events: none;
+
+}
+.about-img2 img {
+    pointer-events:none;
+    width:120px;
+    height:180px;
+    border-radius:20px;
+    object-fit:cover;
+    opacity: .5;
+}
+.about-us{
+    width:100%;
+    /* height:100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.about-text h1 {
+    text-transform: uppercase;
+    font-size: 5vw;
+}
+.about-paragraph{
+    /* width:80%; */
+    font-size: 18px;
+    line-height:30px;
+    /* margin-bottom:30px; */
+    margin : 0 20px 30px 20px;
+}
+.about-note{
+    font-size:18px;
+    /* width:60%; */
+    line-height:30px;
+}
+#cards{
+    width:100%;
+    height:500px;
+    /* background:red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position:relative;
+    z-index: 99;
+}
+.card{
+    width:300px; 
+    height:80%;
+    background: blue;
+    border-radius:20px;
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow:hidden;
+    transition: all ease .5s;
+}
+#card1 {
+    background-image:url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+    
+}
+#card2{
+    background-image:url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4-1024x1024.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#card3{
+    background-image:url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+.overlay{
+    width:100%;
+    height:100%;
+    padding: 20px;
+    background:#98C223;
+    opacity: 0;
+    transition: all ease .5s;
+    cursor: pointer;
+}
+.overlay h1 {
+    margin-top:3vh;
+    margin-bottom:3vh;
+    text-transform: uppercase;
+    color:#000;
+    font-size: 2.5vw;
+    /* word-wrap: nowrap; */
+    font-weight: 800;
+}
+.overlay p {
+    color: #000;
+    font-size: 20px;
+    margin-top:3vw;
+}
+.card:hover .overlay{
+opacity: 1;
+}
+.card:hover{
+    transform: rotate3d( 1,1,0,15deg);
+}
+#page3{
+width: 100%;
+min-height: 100vh;
+position:relative;
+}
+.sidcupNews{
+    width:100%;
+    height:300px;
+    margin:  50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    background:#98C223;
+    position:relative;
+    z-index: 999;
+
+}
+.sidcupNews>img{
+    width: 20%;
+    height:100%;
+    opacity: .9;
+}
+.sidcupNews #news1{
+    transform: scalex(-1);
+}
+.sidcupNews h1 {
+    /* width:40%; */
+    color:#000;
+    font-size:2.7vw;
+    text-align: center;
+    font-weight:700;
+}
+
+#foodSlider{
+    width:100%;
+    height:500px;
+    /* background:red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 50px;
+    
+}
+
+.swiper {
+    width: 100%;
+    height: 90%;
+  
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+.aboutFood{
+    width:70%;
+    margin-left:50px;
+    z-index:99;
+}
+.aboutFood h1{
+    text-transform:uppercase;
+    font-size:4vw;
+    margin-bottom: 20px;
+}
+.aboutFood p,.aboutFood span {
+    width:95%;
+    font-size:1.8vw;
+    line-height:2.8vw;
+    font-weight:300;
+}
+.aboutFood p{
+    margin-bottom:40px;
+}
+.aboutFood button{
+display: block;
+width: 150px;
+height:50px;
+background:transparent;
+color:white;
+border:1px solid #98C223;
+border-radius: 50px;
+margin-top:40px;
+cursor:pointer;
+position: relative;
+overflow:hidden;
+text-transform: uppercase;
+z-index: 99;
+font-weight:700;
+letter-spacing: 2px;
+
+}
+.aboutFood button::after{
+    z-index: 11;
+    content : 'coffee shop' ;
+    width: 0%;
+    height:100%;
+    background:#98C223;
+    top:0;
+    left:0;
+    position: absolute;
+    opacity: 0;
+    transition:all ease-in-out .7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* word-wrap: nowrap; */
+    
+}
+.aboutFood button:hover::after{
+    width:100%;
+    opacity: 1;
+}
